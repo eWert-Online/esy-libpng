@@ -6,7 +6,7 @@
     "buildsInSource": true,
     "exportedEnv": {
       "PNG_LIB": {"scope": "global", "val": "#{self.lib}"},
-      "PNG_INCLUDE": {"scope": "global", "val": "#{self.include}"},
+      "PNG_INCLUDE": {"scope": "global", "val": "#{self.install}/include"},
       "PKG_CONFIG_PATH": {
         "scope": "global",
         "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH }"

@@ -1,0 +1,45 @@
+{
+  "name": "esy-libpng",
+  "version": "1.6.38",
+  "description": "libpng packaged for esy",
+  "esy": {
+    "buildsInSource": true,
+    "exportedEnv": {
+      "CFLAGS":{
+        "scope": "global",
+        "val": "-I#{self.install / 'include'} $CFLAGS"
+      },
+      "LDFLAGS": {
+        "scope": "global",
+        "val": "-L#{self.lib} -lpng $LDFLAGS"
+      },
+      "PKG_CONFIG_PATH": {
+        "scope": "global",
+        "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH }"
+      }
+    },
+    "build": [
+      [
+        "chmod",
+        "755",
+        "./configure"
+      ],
+      [
+        "bash",
+        "-c",
+        "./configure CPPFLAGS=$CFLAGS LDFLAGS='$LDFLAGS' --disable-silent-rules --disable-dependency-tracking --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}"
+      ],
+      [
+        "make"
+      ],
+      [
+        "make",
+        "install"
+      ]
+    ]
+  },
+  "dependencies": {
+    "esy-zlib": "esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3"
+  },
+  "resolutions": {}
+}

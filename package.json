@@ -11,7 +11,7 @@
       },
       "LDFLAGS": {
         "scope": "global",
-        "val": "-L#{self.lib} -lpng $LDFLAGS"
+        "val": "-L#{self.lib} $LDFLAGS"
       },
       "PKG_CONFIG_PATH": {
         "scope": "global",

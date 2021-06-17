@@ -27,6 +27,7 @@
       }
     },
     "buildEnv": {
+      "CPPFLAGS": "$CFLAGS",
       "CFLAGS": "-O2 $CFLAGS"
     },
     "build": [

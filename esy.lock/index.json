@@ -1,17 +1,17 @@
 {
-  "checksum": "68b68b652876bf7255d2717fba610608",
+  "checksum": "389eabf857b999fc480b59ed594bcab7",
   "root": "esy-libpng@link-dev:./package.json",
   "node": {
-    "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9": {
+    "esy-zlib@github:eWert-Online/esy-zlib#9b0394f07551d9fde386e28a6ff269984b63ffcf@d41d8cd9": {
       "id":
-        "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9",
+        "esy-zlib@github:eWert-Online/esy-zlib#9b0394f07551d9fde386e28a6ff269984b63ffcf@d41d8cd9",
       "name": "esy-zlib",
       "version":
-        "github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3",
+        "github:eWert-Online/esy-zlib#9b0394f07551d9fde386e28a6ff269984b63ffcf",
       "source": {
         "type": "install",
         "source": [
-          "github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3"
+          "github:eWert-Online/esy-zlib#9b0394f07551d9fde386e28a6ff269984b63ffcf"
         ]
       },
       "overrides": [],
@@ -29,7 +29,7 @@
       },
       "overrides": [],
       "dependencies": [
-        "esy-zlib@github:esy-packages/esy-zlib#404929fd8b7ed83ed6a528d751840faff957b4b3@d41d8cd9"
+        "esy-zlib@github:eWert-Online/esy-zlib#9b0394f07551d9fde386e28a6ff269984b63ffcf@d41d8cd9"
       ],
       "devDependencies": []
     }

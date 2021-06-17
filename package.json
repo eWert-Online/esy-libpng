@@ -35,7 +35,7 @@
       [
         "bash",
         "-c",
-        "./configure CPPFLAGS=$CFLAGS LDFLAGS='$LDFLAGS' --disable-dependency-tracking --disable-silent-rules --enable-hardware-optimizations=yes --with-pic --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}"
+        "./configure CPPFLAGS=$CFLAGS LDFLAGS='$LDFLAGS' --disable-dependency-tracking --disable-silent-rules --enable-hardware-optimizations=yes --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}"
       ],
       [
         "make"

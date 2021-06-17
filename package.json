@@ -5,7 +5,7 @@
   "esy": {
     "buildsInSource": true,
     "exportedEnv": {
-      "CFLAGS":{
+      "CFLAGS": {
         "scope": "global",
         "val": "-I#{self.install / 'include'} $CFLAGS"
       },
@@ -18,36 +18,24 @@
         "val": "#{self.lib / 'pkgconfig' : $PKG_CONFIG_PATH }"
       },
       "PNG_INCLUDE_PATH": {
-          "val": "#{self.install / 'include' }",
-          "scope": "global"
+        "val": "#{self.install / 'include' }",
+        "scope": "global"
       },
       "PNG_LIB_PATH": {
-          "val": "#{self.lib}",
-          "scope": "global"
+        "val": "#{self.lib}",
+        "scope": "global"
       }
     },
     "build": [
-      [
-        "chmod",
-        "755",
-        "./configure"
-      ],
-      [
-        "bash",
-        "-c",
-        "./configure CPPFLAGS=$CFLAGS LDFLAGS='$LDFLAGS' --disable-dependency-tracking --disable-silent-rules --enable-hardware-optimizations=yes --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}"
-      ],
-      [
-        "make"
-      ],
-      [
-        "make",
-        "install"
-      ]
-    ]
-  },
-  "dependencies": {
-    "esy-zlib": "dmtrKovalenko/esy-zlib#7b7e1be0281b9d164a9736db7ae9dd05c36064af"
-  },
-  "resolutions": {}
+      "chmod 755 ./configure",
+      "./configure CPPFLAGS=$CFLAGS LDFLAGS='$LDFLAGS' --with-pic --disable-dependency-tracking --disable-silent-rules --enable-hardware-optimizations=yes --prefix=$cur__install #{os == 'windows' ? '--host=x86_64-w64-mingw32' : ''}",
+      "make -j4"
+    ],
+    "install": [
+      "make install"
+    ],
+    "dependencies": {
+      "esy-zlib": "dmtrKovalenko/esy-zlib#7b7e1be0281b9d164a9736db7ae9dd05c36064af"
+    }
+  }
 }
